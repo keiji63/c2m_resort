@@ -1,0 +1,43 @@
+﻿วิธีติดตั้งโปรแกรม
+--------------------
+หลังจากติดตั้งเสร็จแล้ว วิธีการใช้งานจะอยู่ในไฟล์ : 
+วิธีการใช้งาน C2M และ คำอธิบาย 
+
+--------------------
+ความต้องการของระบบ
+- PHP 7
+- MySQL Database
+
+--------------------
+
+วีธีติดตั้ง
+1. ติดตั้ง Appserv จำลองเซิฟเวอร์ใน window
+- ดาวน์โหลดโปรแกรม https://www.appserv.org/th/
+- user: root 
+- password:   12345678
+
+2. เอาโฟล์เดอร์ c2m ไปไว้ใน C:\Appserv\www\
+- C:\Appserv\www\c2m
+
+3. เพิ่มฐานข้อมูล
+- เปิด http://localhost/phpmyadmin
+username: root
+password: 12345678
+- คลิกที่ New กรอกชื่อฐานข้อมูล c2m
+- คลิกที่ชื่อ c2m
+- คลิกที่เมนูด้านบน import 
+- เลื่อกไฟล์ c2m.sql
+- คลิก go   (มีข้อความแสดง success เป็นอันสำเร็จ หากมี error แจ้ง support https://www.facebook.com/cus2merpage/)  
+
+4. เปิดใช้งาน
+http://localhost/c2m
+นำไฟล์ c2m-resort.html ไปไว้หน้า Desktop สามารถคลิกเข้าใช้งานระบบได้โดยตรง
+
+
+--------------------
+***  
+แก้ไขค่าต่างๆ กรณีติดตั้งเซิฟเวอร์เอง เช่น ฐานข้อมูลและ url
+- ฐานข้อมูล  แก้ที่ไฟล์  application\config\database.php
+- url, domain, ลิ้งค์  แก้ที่ไฟล์   application\core\MY_Controller.php
+
+--------------------
